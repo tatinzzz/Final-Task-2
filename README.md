@@ -41,24 +41,24 @@ This portfolio demonstrates my understanding of MySQL database creation using a 
 
 ## Screenshots
 
-## student Table Sql Code 
+## Student Table Sql Code 
 ![task2 create studenttbl](https://github.com/user-attachments/assets/5818ba5e-3541-418e-a28e-a78ad4be563c)
  
-## student Table Output
+## Student Table Output
 ![task2 studenttbl](https://github.com/user-attachments/assets/1b6f5b9c-dbaf-4e20-8ee6-9338919f16ed)
 
 
 
-## assignment Table Sql Code  
+## Assignment Table Sql Code  
 ![task2 create assignmenttbl](https://github.com/user-attachments/assets/353096d5-d488-4eae-b517-1958501d888d)
-## assignment Table Output
+## Assignment Table Output
 ![task 2 assignmenttbl](https://github.com/user-attachments/assets/0292fb00-2c55-4300-8f90-24d9d62c3848)
 
 
 
-## submission Table Sql Code  
+## Submission Table Sql Code  
 ![task2 create submissiontbl](https://github.com/user-attachments/assets/9700303e-3940-434a-aa11-2577712a557c)
-## submission Table Output
+## Submission Table Output
 ![task2 submissiontbl](https://github.com/user-attachments/assets/28fe66a3-d24d-4112-b95d-6a8e12c9d257)
 
 
