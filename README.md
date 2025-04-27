@@ -69,10 +69,5 @@ This portfolio demonstrates my understanding of MySQL database creation using a 
 ## Sql Code 
 ![final2](https://github.com/user-attachments/assets/f61d8dde-263d-401c-a10a-3b43c96bb6a6)
 
-
-
-
-
-
-
+## [BACK TO PORTFOLIO](https://tatinzzz.github.io/EDM-Portfolio/)
 
