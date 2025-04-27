@@ -1,6 +1,6 @@
 # Final-Task-2
 
-This portfolio demonstrates my understanding of MySQL database creation using a simplified student assignment submission system. It goes over how to create tables that show students, assignments, and their contributions step-by-step. In order to create a completely effective relational schema, this exercise uses data types, relationships, and constraints such as primary keys, foreign keys, and composite keys.
+This task demonstrates my understanding of MySQL database creation using a simplified student assignment submission system. It goes over how to create tables that show students, assignments, and their contributions step-by-step. In order to create a completely effective relational schema, this exercise uses data types, relationships, and constraints such as primary keys, foreign keys, and composite keys.
 
 ## 1. Create the student table:
 - Define username as a VARCHAR(50)
