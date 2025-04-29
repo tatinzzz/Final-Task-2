@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Midterm Tasks</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      font-size: 1.1em;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      margin: 40px auto;
+      padding: 40px;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ff99;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ff99;
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      margin-right: 10px;
+      padding: 12px 30px;
+      background: #00ff99;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #00ff99;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00cc7a;
+      box-shadow: 0 0 15px #00cc7a;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://tatinzzz.github.io/EDM-Portfolio/" class="btn">BACK TO PORTFOLIO</a>
+    <a href="https://github.com/tatinzzz/Final-Task-2" class="btn" target="_blank">VIEW ON GITHUB</a>
+  </div>
+
+  <div id="particles-js"></div>
+
+  <section>
+
+  <h1>Final Task 2</h1>
+  <p>This task demonstrates my understanding of MySQL database creation using a simplified student assignment submission system. It goes over how to create tables that show students, assignments, and their contributions step-by-step. In order to create a completely effective relational schema, this exercise uses data types, relationships, and constraints such as primary keys, foreign keys, and composite keys.</p>
+
+  <div class="section">
+    <h2>1. Create the Student Table</h2>
+    <ul>
+      <li><code>username</code>: VARCHAR(50)</li>
+      <li>Set <code>username</code> as the Primary Key</li>
+    </ul>
+    <h3>SQL Code</h3>
+    <img src="https://github.com/user-attachments/assets/5818ba5e-3541-418e-a28e-a78ad4be563c" alt="Student Table SQL Code">
+    <h3>Output</h3>
+    <img src="https://github.com/user-attachments/assets/1b6f5b9c-dbaf-4e20-8ee6-9338919f16ed" alt="Student Table Output">
+  </div>
+
+  <div class="section">
+    <h2>2. Create the Assignment Table</h2>
+    <ul>
+      <li><code>shortname</code>: VARCHAR(50), Primary Key</li>
+      <li><code>due_date</code>: DATE, NOT NULL</li>
+      <li><code>url</code>: VARCHAR(255), nullable</li>
+    </ul>
+    <h3>SQL Code</h3>
+    <img src="https://github.com/user-attachments/assets/353096d5-d488-4eae-b517-1958501d888d" alt="Assignment Table SQL Code">
+    <h3>Output</h3>
+    <img src="https://github.com/user-attachments/assets/0292fb00-2c55-4300-8f90-24d9d62c3848" alt="Assignment Table Output">
+  </div>
+
+  <div class="section">
+    <h2>3. Create the Submission Table</h2>
+    <ul>
+      <li><code>username</code>: VARCHAR(50), foreign key to <code>student.username</code></li>
+      <li><code>shortname</code>: VARCHAR(50), foreign key to <code>assignment.shortname</code></li>
+      <li><code>version</code>: INT</li>
+      <li><code>submit_date</code>: DATE, NOT NULL</li>
+      <li><code>data</code>: TEXT</li>
+      <li>Composite Primary Key: <code>(username, shortname, version)</code></li>
+    </ul>
+    <h3>SQL Code</h3>
+    <img src="https://github.com/user-attachments/assets/9700303e-3940-434a-aa11-2577712a557c" alt="Submission Table SQL Code">
+    <h3>Output</h3>
+    <img src="https://github.com/user-attachments/assets/28fe66a3-d24d-4112-b95d-6a8e12c9d257" alt="Submission Table Output">
+  </div>
+
+  <div class="section">
+    <h2>Table Relationships</h2>
+    <h3>1. Student Table</h3>
+    <ul>
+      <li>Primary Key: <code>username</code></li>
+      <li>One-to-Many with <code>submission</code>: one student can have many submissions</li>
+    </ul>
+
+    <h3>2. Assignment Table</h3>
+    <ul>
+      <li>Primary Key: <code>shortname</code></li>
+      <li>One-to-Many with <code>submission</code>: one assignment can have many submissions</li>
+    </ul>
+
+    <h3>3. Submission Table</h3>
+    <ul>
+      <li>Composite Primary Key: <code>(username, shortname, version)</code></li>
+      <li>Many-to-One with student</li>
+      <li>Many-to-One with assignment</li>
+      <li>Models a Many-to-Many relationship with version tracking</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>EER Diagram</h2>
+    <img src="https://github.com/user-attachments/assets/b8aa8cc0-bc89-41e3-a5c9-d9dfc2da7f96" alt="EER Diagram">
+  </div>
+
+  <div class="section">
+    <h2>Final SQL Code</h2>
+    <img src="https://github.com/user-attachments/assets/f61d8dde-263d-401c-a10a-3b43c96bb6a6" alt="Final SQL Code">
+  </div>
+
+
+
+
+
+
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#00ff99" },
+        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+        "opacity": { "value": 0.5, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 } },
+        "size": { "value": 3, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 0.1 } },
+        "line_linked": { "enable": true, "distance": 150, "color": "#00ff99", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 3, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+
